@@ -1,0 +1,31 @@
+Example Output
+
+Below is a screenshot showing the usage and output of the Bash script:
+
+![service_check.sh Example Output](./service_check_sh_example.png)
+
+[bin]# cat service_check.sh
+#!/bin/bash
+
+echo "Enter the service name to check:"
+read SERVICE_NAME
+
+#Check if package is installed
+if rpm -qa | grep "$SERVICE_NAME"; then
+    echo "$SERVICE_NAME is installed."
+
+    #Now check if the service is running
+    if ps -ef | grep -v grep | grep "$SERVICE_NAME"; then
+        echo "$SERVICE_NAME service is running."
+    else
+        echo "$SERVICE_NAME serivce is installed but not running."
+    fi
+else
+    echo "$SERVICE_NAME is not installed."
+fi
+
+[bin]# ./service_check.sh
+Enter the service name to check:
+java
+java is installed.
+java serivce is installed but not running.
