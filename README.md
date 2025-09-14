@@ -45,22 +45,22 @@ The script will:
 
 ## Advanced Linux Setup & Troubleshooting
 
-2) **Ensure Git is installed**
-Run one of the following (based on your OS family):
-
-Amazon Linux 2023 / Fedora / RHEL9+ (dnf):
-```bash
-sudo dnf install -y git
-```
-RHEL / CentOS / Oracle Linux (yum):
-```bash
-sudo yum install -y git
-```
-Ubuntu / Debian (apt):
-```bash
-sudo apt-get update
-sudo apt-get install -y git
-```
+1) **Ensure Git is installed**
+   Run one of the following (based on your OS family):
+   
+   Amazon Linux 2023 / Fedora / RHEL9+ (dnf):
+   ```bash
+   sudo dnf install -y git
+   ```
+   RHEL / CentOS / Oracle Linux (yum):
+   ```bash
+   sudo yum install -y git
+   ```
+   Ubuntu / Debian (apt):
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y git
+   ```
 
 2. **Clone your GitHub repository**
    ```bash
